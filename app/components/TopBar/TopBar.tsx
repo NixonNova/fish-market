@@ -1,8 +1,8 @@
-export default function TopBar() {
+export default function TopBar({ market }: { market: string }) {
   return (
     <nav className="sticky top-0 bg-yellow-500 p-3 flex justify-between z-10">
       <div className="py-1">
-        <p className="font-bold">This is a centered text.</p>
+        <p className="font-bold">{market}</p>
       </div>
       <div className="py-1">
         <select
