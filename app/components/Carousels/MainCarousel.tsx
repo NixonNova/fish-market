@@ -3,7 +3,19 @@ import "slick-carousel/slick/slick-theme.css";
 import Carousel from "./Carousel";
 import NoArrow from "./NoArrow";
 
-export default function MainCarousel() {
+async function getAssets() {
+  const response = await fetch("https://65d0f04fab7beba3d5e3eb78.mockapi.io/api/v1/assets")
+  if  (!response.ok) {
+    throw new Error("Failed to fetch assets")
+  }
+  return response.json()
+}
+
+export default async function MainCarousel() {
+
+  const items = await getAssets()
+  console.log(items)
+
   const settings = {
     dots: true,
     infinite: true,
@@ -39,29 +51,6 @@ export default function MainCarousel() {
       },
     ],
   };
-
-  const items = [
-    {
-      id: 1,
-      name: "Item 1",
-      image: "/bitcoin.png",
-    },
-    {
-      id: 2,
-      name: "Item 2",
-      image: "/arbitrum.png",
-    },
-    {
-      id: 3,
-      name: "Item 3",
-      image: "/lido-dao.png",
-    },
-    {
-      id: 4,
-      name: "Item 4",
-      image: "/stacks.png",
-    },
-  ];
 
   const cardSettings = {
     classes: "min-w-80 rounded-xl flex flex-col items-center justify-center p-3 mr-3",

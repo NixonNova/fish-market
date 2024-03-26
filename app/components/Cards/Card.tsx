@@ -4,7 +4,7 @@ interface CardProps {
   item: {
     id: number;
     name: string;
-    image: string;
+    avatar: string;
   },
   cardSettings?:any 
 }
@@ -15,7 +15,7 @@ export default function Card({ item, cardSettings }: CardProps ) {
         <Image
           width={cardSettings.width}
           height={cardSettings.heigth}
-          src={item.image}
+          src={item.avatar}
           alt="Sunset in the mountains"
         />
       {item.name}
