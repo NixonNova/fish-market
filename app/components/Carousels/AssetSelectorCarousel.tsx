@@ -41,22 +41,22 @@ export default function AssetSelectorCarousel() {
         {
           id: 1,
           name: 'Item 1',
-          image: '/bitcoin.png',
+          avatar: '/bitcoin.png',
         },
         {
           id: 2,
           name: 'Item 2',
-          image: '/arbitrum.png',
+          avatar: '/arbitrum.png',
         },
         {
           id: 3,
           name: 'Item 3',
-          image: '/lido-dao.png',
+          avatar: '/lido-dao.png',
         },
         {
           id: 4,
           name: 'Item 4',
-          image: '/stacks.png',
+          avatar: '/stacks.png',
         }
       ];
 
